@@ -4,8 +4,8 @@ const dailyBtn = document.querySelector('#daily');
 const weeklyBtn = document.querySelector('#weekly');
 const monthlyBtn = document.querySelector('#monthly');
 
-const present = document.querySelectorAll('#current');
-const past = document.querySelectorAll('#previous');
+const present = document.querySelectorAll('.head-h2');
+const past = document.querySelectorAll('.head-h3');
 
 function dailyData() {
   fetch('data.json')
