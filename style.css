@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1em;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Rubik";
+    background-color: hsl(226, 43%, 10%);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.2rem;
+    min-width: 1340px;
+}
+
+/* ======================== Star Main Area ================ */
+
+.site{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "info work play study"
+    "info exercise social self";
+    gap: 25px;
+    row-gap: 55px;
+    padding: 5rem 10rem;
+}
+/* ======================== Star info Area ================ */
+
+.info{
+    grid-area: info;
+    border-radius: 12px;
+    background-color: hsl(235, 46%, 20%);   
+    align-items: center;
+    text-align: start;
+    justify-content: center;
+}
+
+.person{
+    padding: 1rem 2rem;
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 12px;
+}
+
+.info-para{
+    color: hsl(235, 45%, 61%);
+    margin-top: 1rem;
+    font-weight: 400;
+    align-items: center;
+}
+
+.info-h1{
+    margin-top: 1rem;
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: hsl(236, 100%, 87%);
+    margin-bottom: 4rem;
+    align-items: center;
+}
+
+.person-img{
+    width: 30%;
+    border-radius: 100%;
+    border: 4px solid hsl(236, 100%, 87%);
+}
+
+.day{
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.day-para{
+    margin-top: 1rem;
+}
+
+a{
+    text-decoration: none;
+    color: hsl(235, 45%, 61%);
+    cursor: pointer;
+    align-items: center;
+}
+
+a:hover, a:focus{
+    color: hsl(236, 100%, 87%);
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+/* ======================== Star detail Area ================ */
+
+.one{
+    grid-area: work;
+    background-image: url(./images/icon-work.svg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-color: hsl(15, 100%, 70%);
+}
+
+.two{
+    grid-area: play;
+    background-image: url(./images/icon-play.svg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-color: hsl(195, 74%, 62%);
+}
+
+.three{
+    grid-area: study;
+    background-image: url(./images/icon-study.svg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-color: hsl(348, 100%, 68%);
+}
+
+.four{
+    grid-area: exercise;
+    background-image: url(./images/icon-exercise.svg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-color: hsl(145, 58%, 55%);
+}
+
+.five{
+    grid-area: social;
+    background-image: url(./images/icon-social.svg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-color: hsl(264, 64%, 52%);
+}
+
+.six{
+    grid-area: self;
+    background-image: url(./images/icon-self-care.svg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-color: hsl(43, 84%, 65%);
+}
+
+.detail{
+    border-radius: 12px;
+    align-items: center;
+}
+
+.activity{
+    border-radius: 12px;
+    margin-top: 3rem;
+    padding: 1rem 2rem;
+    background-color: hsl(235, 46%, 20%);
+    height: 82%;
+    align-items: center;
+    cursor: pointer;
+    color: hsl(236, 100%, 87%);
+}
+
+.activity:hover{
+    background-color: hsl(235, 45%, 61%);
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head-h2{
+    margin-top: 2rem;
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+}
+
+.head-h3{
+    margin-top: 1rem;
+    font-size: 1rem;
+    padding-bottom: 1.5rem;
+    font-weight: 300;
+}
+
+/* ======================== End Main Area ================ */
+
+/* ======================== START Footer Area ================ */
+
+.foot {
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    color: hsl(35, 77%, 62%);
+    justify-content: center;
+    background-color: black;
+    padding: 5px;
+    margin-top: 70px;
+  }
+  
+.foot a {
+    color: hsl(5, 85%, 63%);
+    text-decoration: none;
+}
+
+.foot a:hover{
+    color: white;
+}
+  
+  
+  /* ======================== End Footer Area ================ */
+  
+  /* ======================== Start Media Querry Area ================ */
+
+@media screen and (max-width:786px){
+    body{
+        min-width: 786px;
+    }
+
+    .site{
+        gap: 15px;
+        padding: 5rem 1rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "info work play"
+         "info study exercise"
+        "info social self";
+    }
+} 
+
+@media screen and (max-width: 400px){
+
+    body{
+        min-width: 400px;
+    }
+
+    .site{
+        margin-top: 30px;
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+        grid-template-areas: "info"
+        "work" 
+        "play"
+        "study"
+        "exercise"
+        "social" 
+        "self";
+    }
+
+    .person{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .info-h1{
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0rem;
+    }
+
+    .info-para{
+        margin-top: 0rem;
+    }
+
+    .day{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hour{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .activity{
+        height: auto;
+    }
+
+    .head-h2{
+        letter-spacing: 0px;
+        font-size: 2.5rem;
+        margin-top: 0rem;
+    }
+
+    .head-h3{
+        margin-top: 0rem;
+        padding-bottom: 0rem;
+    }
+}
+  
+  /* ======================== End Media Querry Area ================ */
